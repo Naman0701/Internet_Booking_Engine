@@ -1,0 +1,38 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.accordian {
+  box-shadow: none !important;
+  padding: 0.4rem 0rem;
+  border-bottom: 1px solid $disabled-grey-color;
+}
+.accordian__title {
+  font-size: 1.25rem !important;
+  font-weight: 700 !important;
+  line-height: 1.6rem !important;
+  text-align: left !important;
+}
+.accordian__details {
+  @include flex(space-between, center, row);
+  font-size: 16rem;
+  font-weight: 400;
+  line-height: 1.3rem;
+  text-align: left !important;
+  margin: 0.7rem 0rem !important;
+  margin-top: 0.3rem !important;
+
+  color: $light-grey-text-color;
+  .accordian__details__value {
+    width: 50%;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 1.7rem;
+    text-align: right !important;
+    color: $light-black-text-color;
+  @media screen and (max-width: $phone-screen-width) {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  }
+}

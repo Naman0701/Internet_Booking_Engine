@@ -1,0 +1,22 @@
+/*
+    Common functions used by many components over and over.
+*/
+
+@mixin flex($justify-content,$align-items,$direction)
+{
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $direction;
+}
+@mixin height-width($height,$width)
+{
+  height: $height;
+  width: $width;
+}
+
+@mixin card-text(){
+  color: $light-grey-text-color;
+  font-weight: 400;
+  font-size: 0.875rem;
+}

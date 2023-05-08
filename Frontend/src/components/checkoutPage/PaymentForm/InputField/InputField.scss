@@ -1,0 +1,101 @@
+@import "../../../../utils/sass/mixins.scss";
+@import "../../../../utils/sass/reset.scss";
+@import "../../../../utils/sass/variable.scss";
+
+.input-field__label,.input-field__checkbox-label{
+    color: $dark-grey-background-color;
+    font-weight: 400;
+    font-size: 0.867rem;
+    line-height: 1.2rem;
+}
+.input-field__checkbox-label{
+    color: $light-grey-text-color;
+}
+.input-field__form-control{
+    width: 47%;
+    padding: 1rem 0rem !important;
+    @media screen and (max-width: $phone-screen-width){
+        width: 100%;
+    }
+}
+.input-field__value{
+    width: 100%;
+    color: $light-grey-text-color;
+    input{
+        height: 3.3rem;
+    }
+}
+
+.checkbox{
+    width: 100%;
+    padding: 0rem !important;
+}
+.Phone,.Email,.Country{
+    width: 100%;
+    .input-field__value{
+        width: 47%;
+        @media screen and (max-width: $phone-screen-width){
+            width: 100%;
+        }
+    }
+}
+.Country select,.State select{
+    width: 47%;
+    height: 3.3rem;
+    border-radius: 0.3rem;
+    color: $dark-grey-background-color;
+    font-weight: 400;
+    font-size: 0.867rem;
+    line-height: 1.2rem;
+    border: 1px solid $light-grey-border-color;
+    padding: 1.05rem 0.875rem;
+    cursor: pointer;
+    background-color: $white-color;
+    @media screen and (max-width: $phone-screen-width){
+        width: 100%;
+    }
+}
+.State select{
+    width: 100%;
+    option{
+        &:first-child{
+            display: none;
+        }
+    }
+}
+
+.City{
+    width: 25%;
+    margin-left: 2.5rem !important;
+    @media screen and (max-width: $phone-screen-width){
+        width: 100%;
+        margin-left: 0rem !important;
+    }
+}
+.Zip{
+    width: 20%;
+    @media screen and (max-width: $phone-screen-width){
+        width: 100%;
+    }
+}
+.Exp_MM{
+    margin-left: 2.5rem !important;
+    @media screen and (max-width: $phone-screen-width){
+        width: 100%;
+        margin-left: 0rem !important;
+    }
+
+}
+.Exp_MM,.Exp_YY{
+
+    width: 23%;
+    @media screen and (max-width: $phone-screen-width){
+        width: 100%;
+    }
+}
+.Cvv_Code{
+    width: 100%;
+    .input-field__value{
+        width: 23%;
+    }
+}

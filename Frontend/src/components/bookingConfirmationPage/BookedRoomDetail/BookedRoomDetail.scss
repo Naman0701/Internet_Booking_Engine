@@ -1,0 +1,78 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.content-section__room-detail {
+  @include flex(flex-start, flex-start, row);
+  border-bottom: 1px solid $disabled-grey-color;
+  margin: 1rem 0rem;
+  padding-bottom: 1.6rem;
+  @media screen and (max-width: $phone-screen-width) {
+    @include flex(flex-start, flex-start, column);
+    .crousel {
+      width: 100% !important;
+      margin: 5% 0rem;
+      border-radius: 0.4rem;
+      .css-1abc02a,
+      .css-hn784z {
+        display: none;
+      }
+    }
+  }
+  .content-section__room-detail__booking-data {
+    margin-left: 1rem;
+    width: 100%;
+    padding-right: 1.5rem;
+    @media screen and (max-width: $phone-screen-width) {
+      margin: 0;
+      width: 100%;
+      @include flex(center, center, column);
+    }
+    & > * {
+      margin-bottom: 1.5rem !important;
+    }
+    @include flex(flex-start, space-between, column);
+    .booking-data__date {
+      @include flex(flex-start, flex-start, row);
+    }
+    .booking-data__promo-details {
+      margin: 0rem 0.7rem;
+      @include flex(flex-start, flex-start, column);
+      width: 40%;
+
+      color: $light-grey-text-color;
+      text-align: left;
+      font-size: 1rem;
+      line-height: 1.3rem;
+      @media screen and (max-width: $phone-screen-width) {
+        width: 100%;
+        text-align: justify;
+        margin-left: 0;
+      }
+      .promo-details__promo-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        line-height: 1.6rem;
+        color: $light-black-text-color;
+      }
+    }
+    .booking-data__cancel {
+      width: 100%;
+      text-align: left;
+      margin: 0rem 0.7rem;
+      color: $light-grey-text-color;
+      @include flex(space-between, center, row);
+      @media screen and (max-width: $phone-screen-width) {
+        @include flex(flex-start, flex-end, column);
+        gap: 1.5rem;
+      }
+      .nightly-rate {
+        font-size: 1.25rem;
+        font-weight: 400;
+        line-height: 1.7rem;
+        text-align: left;
+        color: $black-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,150 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.room-details-modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: $grey-modal-background-color;
+  margin-bottom: 2.5rem;
+  overflow: auto;
+  @include flex(center, center, row);
+
+  .room-details-modal-container {
+    height: 90vh;
+    width: 90vw;
+    overflow: auto;
+    background-color: $white-color;
+    .room-details-modal-crousal {
+      position: relative;
+      width: 100%;
+      .room-details-modal-crousal__close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+        background: $black-translucent-color;
+        border: none;
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+        color: $white-color;
+      }
+      .room-details-modal-crousal__title {
+        padding: 1rem 6rem;
+        position: absolute;
+        bottom: 0;
+        z-index: 1;
+        font-size: 2rem;
+        color: $white-color;
+        @media screen and (max-width: $phone-screen-width) {
+          padding: 1rem;
+        }
+      }
+    }
+    .room-details-modal-description {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      padding: 1rem 2rem 2rem 6rem;
+      @media screen and (max-width: $phone-screen-width) {
+        grid-template-columns: 1fr;
+        padding: 2% 7%;
+      }
+
+      .room-details-modal-description__details {
+        @media screen and (max-width: $phone-screen-width) {
+          width: 100%;
+        }
+        .room-details-modal-details {
+          @include flex(none, flex-start, row);
+
+          .room-details-modal-details__area {
+            padding: 0.5rem 1.2rem;
+            @include card-text();
+            @include flex(space-between, center, row);
+          }
+          .room-details-modal-details__capacity {
+            padding: 0.5rem 0rem;
+            @include card-text();
+            @include flex(space-between, center, row);
+
+            .user {
+              margin-right: 0.5rem;
+            }
+          }
+          .room-details-modal-details__bed {
+            padding: 0.5rem 0.8rem;
+            @include card-text();
+            @include flex(space-between, center, row);
+
+            .bed {
+              margin-right: 0.5rem;
+            }
+          }
+          .room-details-modal-details__rate {
+            padding: 0.5rem 1.1rem;
+            font-size: 1rem;
+            font-weight: 700;
+          }
+        }
+        .room-details-modal__text {
+          margin-top: 0.5rem;
+          text-align: justify
+        }
+        .room-details-modal__rate-deals {
+          @include flex(space-between, flex-start, column);
+          margin-top: 2rem;
+          .rate-deals__card-heading {
+            @include flex(space-between, flex-start, column);
+
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-top: 1rem;
+            padding: 1rem 0;
+          }
+        }
+      }
+      .room-details-modal-description__amenities,
+      .room-details-modal-description__amenities__mobile {
+        padding: 0 1rem 1rem 4rem;
+        font-weight: 400;
+        font-size: 1rem;
+
+        @media screen and (max-width: $phone-screen-width) {
+          display: none;
+        }
+        @include flex(space-between, flex-start, row);
+        align-content: flex-start;
+        flex-wrap: wrap;
+        .room-details-modal-amenities__title,
+        .room-details-modal-amenities__title__mobile {
+          width: 100%;
+        }
+        .room-details-modal-amenities__item,
+        .room-details-modal-amenities__item__mobile {
+          @include flex(flex-start, center, row);
+          width: 50%;
+          line-height: 2;
+          font-size: 0.9rem;
+          .check-circle,
+          .check-circle__mobile {
+            padding-right: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+        }
+      }
+      .room-details-modal-description__amenities__mobile {
+        display: none;
+        padding: 1rem 1rem 1rem 0rem;
+        width: 100%;
+        @media screen and (max-width: $phone-screen-width) {
+          display: inline-block;
+        }
+
+        .room-details-modal-amenities__item__mobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

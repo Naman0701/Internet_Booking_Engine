@@ -1,0 +1,18 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/variable.scss";
+@import "../../../utils/sass/reset.scss";
+
+.accessibility-div {
+  width: 80%;
+  @media screen and (max-width: $phone-screen-width) {
+    width: 100%;
+  }
+}
+.accessibilitiy {
+  @include flex(space-around, center, row);
+  width: 100%;
+}
+.accessibilitiy__icon {
+  width: 1.2rem;
+  margin-right: 0.3rem;
+}

@@ -1,0 +1,179 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.header {
+  @include flex(space-between, center, row);
+  width: 100%;
+  padding: 0rem 5.3rem;
+  background-color: $white-color;
+  color: $primary-blue-text-color;
+  height: $header-height;
+  position: relative;
+  z-index: 1;
+
+  @media screen and (max-width: $phone-screen-width) {
+    padding: 0rem 1rem;
+  }
+
+  .header__hotel-details {
+    @include flex(flex-start, center, row);
+    .header__hotel-details__logo {
+      cursor: pointer;
+      width: 22%;
+      margin-right: 0.6rem;
+    }
+    .header__hotel-details__name {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+  }
+
+  .header__operations {
+    @include flex(space-around, center, row);
+    width: 30%;
+
+    @media screen and (max-width: $phone-screen-width) {
+      display: none;
+    }
+    & * {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      border: none;
+      background-color: $white-color;
+      color: $primary-blue-text-color;
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem 0.5rem 0.3rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .header__operations__my-bookings {
+      width: auto;
+    }
+    .header__operations__language-div {
+      @include flex(center, center, row);
+      padding: 0rem;
+    }
+    .header__operations__language-div__globe {
+      width: 1.6rem;
+      padding: 0rem;
+    }
+    .header__operations__language-div__select,
+    .header__operations__currency {
+      appearance: none;
+      padding: 0.5rem 1rem 0.5rem 0.5rem;
+      .header__operations__language-div__select__option,
+      .header__operations__currency__option {
+        background-color: $off-white-color;
+        font-weight: 600;
+        &:checked {
+          background-color: $primary-blue-color;
+          color: $white-color;
+        }
+      }
+    }
+    .header__operations__login {
+      background-color: $primary-blue-color;
+      color: $white-color;
+      text-align: center;
+      padding: 0.469rem 1.25rem;
+      font-size: 0.875rem;
+      border-radius: 0.4rem;
+    }
+  }
+  .header__operations__mobile {
+    display: none;
+    @media screen and (max-width: $phone-screen-width) {
+      display: inline-block;
+    }
+  }
+}
+.menuButton {
+  border: none;
+  background-color: $white-color;
+  color: $primary-blue-text-color;
+  cursor: pointer;
+  font-size: 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+.MuiDrawer-root {
+  @media screen and (min-width: $phone-screen-width) {
+    display: none;
+  }
+}
+.MuiDrawer-paper {
+  @media screen and (max-width: $phone-screen-width) {
+    width: 35%;
+    @include flex(flex-start, center, column);
+    & * {
+      cursor: pointer;
+      border: none;
+      outline: none;
+      border: none;
+      background-color: $white-color;
+      color: $primary-blue-text-color;
+      font-size: 1rem;
+      padding: 0.5rem 1.5rem 0.5rem 0.3rem;
+      text-align: left;
+      font-weight: 600;
+      margin: 15% 0rem;
+    }
+  }
+  .close__drawer {
+    align-self: flex-start;
+    padding: 0rem 0rem 19% 0rem;
+    margin: 19%;
+    width: 63%;
+    border-bottom: 1px solid $disabled-grey-color;
+    margin-bottom: 0;
+  }
+  .header__operations__mobile__login {
+    background-color: $primary-blue-color;
+    color: $white-color;
+    text-align: center;
+    padding: 0.469rem 1.25rem;
+    font-size: 0.875rem;
+    border-radius: 0.4rem;
+  }
+  .header__operations__mobile__my-bookings {
+    width: auto;
+
+    width: 63%;
+    border-bottom: 1px solid $disabled-grey-color;
+    margin-top: 0;
+    padding-bottom: 17%;
+  }
+  .header__operations__mobile__language-div {
+    @include flex(center, center, row);
+    padding: 0rem;
+    width: 63%;
+    border-bottom: 1px solid $disabled-grey-color;
+    margin-top: 0;
+  }
+  .header__operations__mobile__language-div__globe {
+    width: 1.6rem;
+    padding: 0rem;
+  }
+  .header__operations__mobile__currency {
+    width: 63%;
+    border-bottom: 1px solid $disabled-grey-color;
+    margin-top: 0;
+    padding-bottom: 17%;
+  }
+  .header__operations__mobile__language-div__select,
+  .header__operations__mobile__currency {
+    appearance: none;
+    padding: 0.5rem 1rem 0.5rem 0.5rem;
+    .header__operations__mobile__language-div__select__option,
+    .header__operations__mobile__currency__option {
+      background-color: $off-white-color;
+      font-weight: 600;
+      &:checked {
+        background-color: $primary-blue-color;
+        color: $white-color;
+      }
+    }
+  }
+}

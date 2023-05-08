@@ -1,0 +1,55 @@
+@import "../../../../utils/sass/mixins.scss";
+@import "../../../../utils/sass/reset.scss";
+@import "../../../../utils/sass/variable.scss";
+
+.payment-form__userDetails-form{
+    @include flex(space-between,flex-start,row);
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.payment-form__userDertails-form__button{
+    width: 100%;
+    @include flex(flex-end,center,row);
+    margin: 1rem 0rem;
+}
+.hide-form{
+    display: none;
+}
+.payment-form__userDertails-form__edit-prev{
+    color: $primary-blue-text-color;
+    border: none;
+    background-color: $white-color;
+    font-weight: 400;
+    font-size: 0.875rem;
+    line-height: 1.2rem;
+    margin: 0rem 2rem;
+    cursor: pointer;
+}
+.payment-form__userDertails-form__edit-next{
+    background-color: $primary-blue-text-color;
+    border-radius: 0.4rem;
+    cursor: pointer;
+    padding: 0.55rem 1rem;
+    width: 11rem;
+    border: none;
+    font-size: 14px;
+    color: $white-color;
+    &:disabled{
+        background-color: $disabled-grey-color;
+        cursor: not-allowed;
+    }
+}
+
+.payment-form__userDetails__due{
+    width: 100%;
+    text-align: right;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    .payment-form__userDetails__due__amount{
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 2.1rem;
+    }
+}

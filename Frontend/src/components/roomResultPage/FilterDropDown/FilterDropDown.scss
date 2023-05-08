@@ -1,0 +1,38 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.filter-section__filter {
+  .MuiPaper-root {
+    background-color: $very-light-grey-background-color;
+    box-shadow: none;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid $disabled-grey-color;
+    &::before{
+        display: none;
+    }
+    &:last-child{
+        border-bottom: none;
+    }
+  }
+  .MuiFormControlLabel-root {
+    width: 100%;
+  }
+  .MuiAccordionSummary-content{
+    margin-bottom: 0rem !important;
+  }
+  .MuiCheckbox-root{
+    background-color: $white-color;
+    padding: 0;
+    margin-right: 1rem;
+    border-radius: 0;
+    margin-left: 0.5rem;
+  }
+  .MuiButtonBase-root{
+    padding: 0;
+  }
+  .MuiAccordionDetails-root{
+    padding: 0 !important;
+    margin: 1rem 0rem;
+}
+}

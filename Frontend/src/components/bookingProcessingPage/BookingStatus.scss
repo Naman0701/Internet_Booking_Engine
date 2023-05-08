@@ -1,0 +1,36 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.booking-status {
+    min-height: calc(100vh - $footer-height - $header-height);
+    @include flex(center, center, column);
+    height: 100%;
+    background-color: $off-white-color;
+    border-radius: 1rem;
+    padding: 3rem;
+    margin: auto;
+    box-shadow: 0 0 1rem $black-translucent-color;
+    .emoji {
+      font-size: 8rem;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 0 0.5rem $grey-modal-background-color);
+    }
+  
+    .title {
+      font-size: 3rem;
+      margin-bottom: 2rem;
+      color: $black-color;
+      text-align: center;
+      text-shadow: 0 0.1rem 0.1rem $off-white-color;
+    }
+  
+    .message {
+      font-size: 1.5rem;
+      color: $black-color;
+      text-align: center;
+      max-width: 30rem;
+      margin-bottom: 2rem;
+      text-shadow: 0 0.1rem 0.1rem $off-white-color;
+    }
+}

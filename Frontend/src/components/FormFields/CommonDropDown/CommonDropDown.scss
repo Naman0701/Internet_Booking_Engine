@@ -1,0 +1,30 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/variable.scss";
+@import "../../../utils/sass/reset.scss";
+
+.common-drop-down__vertical{
+    text-align: left;
+    .MuiFormControl-root{
+        margin: 0;
+        width: 100%;
+    }
+}
+.common-drop-down__horizontal{
+    text-align: left;
+    height: 100%;
+    .MuiFormControl-root{
+        height: 100%;
+        width: 100%;
+        .MuiInputBase-root{
+            height: 100%;
+        }
+    }
+}
+#menu-Rooms .MuiMenu-paper,#menu-Beds .MuiMenu-paper {
+    width: 5% !important;
+    padding: 0;
+    .MuiMenuItem-root:hover,.Mui-selected{
+        background-color: $primary-blue-color !important;
+        color: $white-color !important;
+    }
+  }

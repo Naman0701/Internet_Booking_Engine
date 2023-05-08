@@ -1,0 +1,28 @@
+@import "../../../../utils/sass/mixins.scss";
+@import "../../../../utils/sass/reset.scss";
+@import "../../../../utils/sass/variable.scss";
+
+.booking-date{
+    border: 1px solid $dark-grey-background-color;
+    border-radius: 0.4rem;
+    margin: 0rem 0.4rem;
+    @include flex(space-between,center,column);
+    padding: 1rem;
+    height: 7rem;
+    .booking-date__date-type{
+        font-weight: 400;
+        font-size: 0.85rem;
+        color: $dark-grey-background-color;
+        line-height: 1.25rem;
+    }
+    .booking-date__date{
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+    }
+    .booking-date__month-year{
+        font-size: 1rem;
+        line-height: 1.3rem;
+        color: $light-black-text-color;
+    }
+}

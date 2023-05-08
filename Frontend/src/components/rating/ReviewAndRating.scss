@@ -1,0 +1,90 @@
+
+
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.rating-wrapper {
+  @include flex(none, center, column);
+  @include height-width(100%,100%);
+  min-height: calc(100vh - 5.3rem - 5.3rem);
+}
+
+.rating-review-page {
+  @include flex(none, center, column);
+  margin: 4rem;
+  gap: 2rem;
+  padding: 4rem;
+  width: 60%;
+  height: 100%;
+  background-color: $white-color;
+  border: 1px;
+  z-index: 2;
+
+  .rating-review-page__title {
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: $primary-blue-text-color;
+  }
+
+  .review-input {
+    padding: 2rem;
+    box-sizing: border-box;
+    width: 90%;
+    border-radius: 0.4rem;
+    border: 2px solid $light-grey-background-color;
+    background-color: $white-color;
+    font-size: 1rem;
+    color: $light-grey-text-color;
+    box-shadow: 0px 0px 5px $box-shadow-light-color;
+  }
+
+  .review-input:focus {
+    outline: none;
+    border: 1px solid $light-grey-text-color;
+    box-shadow: 0px 0px 1px $light-grey-text-color;
+  }
+
+  .review-submit-buttom {
+    margin: 0.4rem 1.5rem 1rem 1.5rem;
+    width: 8.5rem;
+    height: 2.75rem;
+    border-radius: 0.4rem;
+    border: none;
+    font-size: 0.875rem;
+    font-weight: 700;
+    background-color: $primary-blue-text-color;
+    color: $white-color;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+  }
+
+  .review-submit-button:hover {
+    background-color: $secondary-bright-blue-color;
+    box-shadow: 0px 0px 5px $secondary-bright-blue-color;
+  }
+
+  .submit-button:active {
+    background-color: $primary-blue-text-color;
+    box-shadow: 0px 0px 3px $box-shadow-light-color;
+  }
+
+  .rating-label {
+    font-size: 1rem;
+    color: $light-grey-text-color;
+    margin-right: 1rem;
+  }
+}
+.thank-you-message,
+.already-reviewed {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary-blue-text-color;
+  margin: 16rem;
+  background-color: $white-color;
+  padding: 4rem;
+  z-index: 2;
+  box-shadow: 0px 0px 5px $box-shadow-light-color;
+  border-radius: 0.4rem;
+  max-width: 90%;
+}

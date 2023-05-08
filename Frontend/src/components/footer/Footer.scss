@@ -1,0 +1,33 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.footer {
+  @include flex(space-between, center, row);
+  padding: 1% 6%;
+  background-color: $primary-blue-color;
+  color: $white-color;
+  height: $footer-height;
+  width: 100%;
+  .footer__logo {
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(324deg)
+      brightness(107%) contrast(101%);
+      width: 10%;
+      @media screen and (max-width:$phone-screen-width){
+        width: 35%;
+    }
+  }
+  .footer__text {
+    @include flex(center,flex-end,column);
+
+    @media screen and (max-width:$phone-screen-width){
+      width: 55%;
+      font-size: 0.7rem;
+      text-align: right;
+  }
+    .footer__text__copyright{
+      margin-right: 0.2rem;
+    }
+  }
+
+}

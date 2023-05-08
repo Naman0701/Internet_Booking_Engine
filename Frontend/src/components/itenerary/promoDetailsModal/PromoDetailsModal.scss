@@ -1,0 +1,44 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.promo-details-modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: $grey-modal-background-color;
+  margin-bottom: 2.5rem;
+  overflow: auto;
+  @include flex(center, center, row);
+  .promo-details-modal-container {
+    height: 15rem;
+    width: 26rem;
+    overflow: auto;
+    background-color: $white-color;
+    padding: 2rem;
+    position: relative;
+
+    @include flex(none, flex-start, column);
+    .promo-details__close-button {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.7rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .promo-details-modal__title{
+        font-weight: 700;
+        font-size: 1.75rem;
+    }
+    .promo-details-modal__text{
+        font-size: 1rem;
+        font-weight: 400;
+        width: 80%;
+    }
+    .promo-details-modal__package{
+        width: 80%;
+        padding-top: 2rem;
+        @include flex(space-between,flex-start,row)
+    }
+  }
+}

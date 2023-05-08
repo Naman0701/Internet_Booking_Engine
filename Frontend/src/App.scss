@@ -1,0 +1,10 @@
+@import "./utils/sass/variable.scss";
+.App {
+  text-align: center;
+  font-family: 'Lato', sans-serif !important;
+}
+[data-amplify-authenticator][data-variation="modal"],
+[data-amplify-authenticator][data-variation="default"] {
+  position: static !important;
+  min-height: $page-min-height !important;
+}

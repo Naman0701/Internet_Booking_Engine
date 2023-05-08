@@ -1,0 +1,106 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.room-result-page {
+  min-height: $page-min-height;
+}
+.room-result-page__background {
+  background-color: $dark-grey-background-color;
+  height: 12rem;
+  display: inline-block;
+  width: 100%;
+  position: relative;
+  .room-result-page__background__image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 90%;
+    background-color: $black-translucent-color;
+  }
+}
+.room-result-page__content {
+  padding: 1rem 4rem;
+  margin-bottom: 5rem;
+  @media screen and (max-width: $phone-screen-width) {
+    padding: 1rem;
+  }
+}
+.room-result-page__content__properties {
+  width: 100%;
+  margin: 2rem 0rem;
+  @include flex(flex-start, flex-start, row);
+  gap: 1rem;
+  @media screen and (max-width: $phone-screen-width) {
+    @include flex(flex-start, center, column);
+
+  }
+
+  .room-result-page__content__properties__filter-section {
+     width: 24%;
+    background-color: $very-light-grey-background-color;
+    padding: 2rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: left;
+    @media screen and (max-width: $phone-screen-width) {
+     width: 100%;
+    }
+  }
+  .room-result__result-section {
+     width: 100%;
+    .room-result__result-section__title {
+      @include flex(space-between, center, row);
+      @media screen and (max-width: $phone-screen-width) {
+        padding: 0rem 1rem;
+        @include flex(flex-start, flex-start, column);
+      }
+      & * {
+        font-weight: 700;
+        @media screen and (max-width: $phone-screen-small-width) {
+          padding: 0;
+        }
+      }
+      width: 100%;
+      .room-result__result-section__title__heading {
+        font-size: 1.25rem;
+      }
+
+      .room-result__result-section__title__extras {
+        @include flex(space-evenly, center, row);
+        width: 35%;
+        @media screen and (max-width: $phone-screen-small-width) {
+          @include flex(space-between, flex-start, column);
+            width: 100%;
+          }
+        @media screen and (max-width: $phone-screen-width) and (min-width:$phone-screen-small-width) {
+        @include flex(space-between, center, row);
+          width: 100%;
+        }
+      }
+    }
+    .room-result__result-section__content{
+      @include flex(flex-start, flex-start, row);
+      gap:0rem;
+      @media screen and (max-width: $phone-screen-width) {
+        @include flex(flex-start, flex-start, column);
+
+      }
+    }
+  }
+}
+
+.room-result-page__content__search {
+  width: 100%;
+  height: 5.7rem;
+  margin-top: 1rem;
+  @media screen and (max-width: $phone-screen-width) {
+    height: 27rem;
+  }
+}

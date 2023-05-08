@@ -1,0 +1,37 @@
+@import "../../../../utils/sass/mixins.scss";
+@import "../../../../utils/sass/reset.scss";
+@import "../../../../utils/sass/variable.scss";
+
+.crousel {
+  width: 100%;
+  .MuiButtonBase-root {
+    border-radius: 0;
+  }
+  .css-1abc02a,
+  .css-hn784z {
+    &:hover >* {
+      opacity: 1 !important;
+    }
+    button,
+    &:hover button {
+      top: 35% !important;
+      margin: 0;
+      background-color: transparent;
+      opacity: 1;
+      .MuiSvgIcon-root,
+      .MuiSvgIcon-root:hover {
+        width: 2.5rem;
+        height: 2.5rem;
+        color: $white-color;
+        opacity: 1;
+      }
+    }
+  }
+}
+.crousel__image {
+  object-fit: cover;
+  width: 100%;
+}
+.css-1m9128y {
+  display: none;
+}

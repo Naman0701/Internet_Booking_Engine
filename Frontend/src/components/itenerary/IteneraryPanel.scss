@@ -1,0 +1,93 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.checkout-itenarary-panel {
+  @include flex(flex-start, center, column);
+  width: 100%;
+  padding: 2rem 1.2rem;
+  background-color: $very-light-grey-background-color;
+}
+
+.itenerary-panel {
+  @include flex(flex-start, center, column);
+  width: 35%;
+  padding: 2rem 1.2rem;
+  background-color: $very-light-grey-background-color;
+  margin-top: 1rem;
+
+  @media screen and (max-width: $phone-screen-width) {
+    width: 100%;
+  }
+  & *{
+    text-align: left;
+  }
+}
+.itenerary-panel__title {
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+.itenerary-panel__subtitle__resort-name {
+  @include flex(space-between, flex-start, row);
+  margin-top: 1rem;
+  width: 100%;
+  font-weight: 700;
+}
+
+.itenerary-panel__subtitle__remove-button {
+  cursor: pointer;
+  color: $secondary-bright-blue-color;
+  border: none;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.itenerary-panel__details {
+  color: $light-grey-text-color;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  @include flex(none, flex-start, column);
+  gap: 0.2rem;
+}
+.itenerary-panel__room-details {
+  width: 100%;
+  @include flex(space-between, flex-start, row);
+}
+
+.itenerary-panel__price-breakdown {
+  width: 100%;
+  @include flex(space-between, flex-start, row);
+}
+
+.itenerary-panel__promo-details {
+  width: 100%;
+  & *{
+    text-align: left
+  }
+  @include flex(space-between, flex-start, row);
+  .info-circle {
+    color: $light-grey-text-color;
+    font-size: 0.8rem;
+  }
+}
+.itenerary-panel__line-divider {
+  border-top: solid 1px $light-grey-text-color;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.itenerary-panel__button-div {
+  text-align: center;
+}
+.itenerary-panel__continue-button {
+  cursor: pointer;
+  margin-top: 1rem;
+  background: none;
+  color: $primary-blue-color;
+  padding: 0.5rem 1rem;
+  border: 0.15rem solid $primary-blue-color;
+  border-radius: 0.2rem;
+  font-weight: 700;
+  font-size: 0.7rem;
+}

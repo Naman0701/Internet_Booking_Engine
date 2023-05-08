@@ -1,0 +1,152 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.landing-page__vertical__form {
+  position: absolute;
+  min-height: 40rem;
+  width: 27rem;
+  z-index: 2;
+  background-color: $white-color;
+  @include flex(space-around, flex-start, column);
+  padding: 2rem;
+  padding-top: 0rem;
+  border: 1px solid $black-color;
+  border-radius: 0.3rem;
+  @media screen and (max-width: $phone-screen-width) {
+    position: static;
+    width: 100%;
+    border: 0rem;
+    padding: 1rem 0.2rem;
+  }
+}
+.landing-page__horizontal__form {
+  @extend .landing-page__vertical__form;
+  @include flex(space-between, center, row);
+  position: static;
+  min-height: 0rem;
+  height: 5.7rem;
+  max-height: 5.7rem;
+  width: 100%;
+  padding: 0;
+  border: none;
+  @media screen and (max-width: $phone-screen-width) {
+    @include flex(space-between, center, column);
+  }
+}
+.landing-page__vertical__form__span {
+  @include flex(flex-start, flex-start, column);
+}
+.landing-page__horizontal__form__span {
+  @extend .landing-page__vertical__form__span;
+  width: 87%;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  grid-gap: 1.5rem;
+  @media screen and (max-width: $phone-screen-width) {
+    grid-template-columns: 1fr;
+  }
+}
+.landing-page__vertical__form__property-label,
+.landing-page__vertical__form__dates-label,
+.landing-page__vertical__form__guest__label,
+.landing-page__vertical__form__rooms__label {
+  font-size: 1rem;
+  text-align: left;
+  margin: 1rem 0.3rem 0.6rem 0.3rem;
+}
+
+.landing-page__vertical__search {
+  padding: 0.8rem 1rem;
+  font-weight: 700;
+  border: none;
+  margin: 1rem 0rem;
+  border-radius: 0.4rem;
+  outline: none;
+  color: $white-color;
+  background-color: $primary-blue-text-color;
+  cursor: pointer;
+  align-self: center;
+  justify-self: center;
+  width: 40%;
+}
+.landing-page__horizontal__search {
+  @extend .landing-page__vertical__search;
+  margin: 0rem;
+  width: 10.5rem;
+  height: 4.125rem;
+  font-size: 0.875rem;
+  @media screen and (max-width: $phone-screen-width) {
+    margin: 7% 0rem;
+  }
+}
+.landing-page__vertical__form__extra-options {
+  @include flex(flex-start, flex-start, row);
+  text-align: left;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.landing-page__horizontal__form__extra-options {
+  @extend .landing-page__vertical__form__extra-options;
+  order: 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 1.5rem;
+  @media screen and (max-width: $phone-screen-width) {
+    grid-template-columns: 1fr;
+  }
+}
+.landing-page__vertical__form__guest {
+  width: 70%;
+  @media screen and (max-width: $phone-screen-width) {
+    width: 100%;
+  }
+  .MuiFormControl-root {
+    width: 95%;
+    @media screen and (max-width: $phone-screen-width) {
+      width: 100%;
+    }
+  }
+}
+.landing-page__horizontal__form__guest {
+  @extend.landing-page__vertical__form__guest;
+  width: 100%;
+  height: 4.25rem;
+}
+.landing-page__vertical__form__rooms {
+  width: 30%;
+  @media screen and (max-width: $phone-screen-width) {
+    width: 100%;
+  }
+}
+.landing-page__horizontal__form__rooms {
+  @extend .landing-page__vertical__form__rooms;
+  width: 100%;
+  height: 4.25rem;
+}
+.MuiAlert-root {
+  width: 100% !important;
+  position: absolute !important;
+  top: 100% !important;
+}
+.alert {
+  position: relative;
+  width: 19rem;
+}
+.renderer {
+  @include flex(flex-start, flex-start, column);
+  .renderlabel {
+    font-size: 0.85rem;
+    color: $dark-grey-background-color;
+  }
+  .renderValue {
+    font-size: 1rem;
+    color: $black-color;
+    font-weight: 700;
+  }
+}
+.landing-page__guest-type-div {
+  margin: 1.5rem 0rem;
+  width: 100%;
+}

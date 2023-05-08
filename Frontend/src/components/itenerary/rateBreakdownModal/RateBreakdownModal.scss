@@ -1,0 +1,64 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.rate-breakdown-modal__details {
+  color: $black-color;
+  font-size: 1rem;
+  font-weight: 400;
+  width: 100%;
+  @include flex(none, flex-start, column);
+  gap: 0.2rem;
+}
+
+.rate-breakdown-modal__promo-details {
+  width: 100%;
+  @include flex(space-between, flex-start, row);
+  .info-circle {
+    color: $light-grey-text-color;
+    font-size: 0.8rem;
+  }
+}
+.rate-breakdown-modal__promo-title{
+  padding: 1rem 0 0 0;
+}
+.rate-breakdown-modal {
+  height: 100vh;
+  width: 100vw;
+  background-color: $grey-modal-background-color;
+  margin-bottom: 2.5rem;
+  overflow: auto;
+  @include flex(center, center, row);
+  .rate-breakdown-modal-container {
+    height: 70%;
+    width: 25%;
+    overflow: auto;
+    background-color: $white-color;
+    padding: 2rem;
+    position: relative;
+
+    @include flex(none, flex-start, column);
+    .rate-breakdown__close-button {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.7rem;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+    .promo-details-modal__title{
+        font-weight: 700;
+        font-size: 1.75rem;
+    }
+    .promo-details-modal__text{
+        font-size: 1rem;
+        font-weight: 400;
+        width: 80%;
+    }
+    .promo-details-modal__package{
+        width: 80%;
+        padding-top: 2rem;
+        @include flex(space-between,flex-start,row)
+    }
+  }
+}

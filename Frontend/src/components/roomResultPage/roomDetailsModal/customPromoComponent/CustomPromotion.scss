@@ -1,0 +1,46 @@
+@import "../../../../utils/sass/mixins.scss";
+@import "../../../../utils/sass/reset.scss";
+@import "../../../../utils/sass/variable.scss";
+
+.custom-promo-container {
+  @include flex(center, flex-start, column);
+  padding: 4rem 0;
+  gap: 0.5rem;
+
+  .custom-promo__title {
+    font-weight: 400;
+    font-size: 0.875rem;
+  }
+
+  .custom-promo__submit-field {
+    @include flex(flex-start, flex-start, row);
+    gap: 1rem;
+
+    .custom-promo__input {
+      border: 0.06rem solid $disabled-grey-color;
+      border-radius: 0.25rem;
+      padding: 0.75rem 1rem;
+      width: 13rem;
+      height: 3rem;
+    }
+
+    .custom-promo__apply-btn {
+      background-color: $primary-blue-text-color;
+      color: $white-color;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      height: 3rem;
+      padding: 0.75rem 1.25rem;
+      align-self: stretch;
+      flex-grow: 1;
+      font-weight: 700;
+      font-size: 0.875rem;
+    }
+  }
+  .custom-promo__error-message{
+    color:$bright-red-warning-color;
+  }
+  .custom-promo__success-message{
+    color:$success-green-color;
+  }
+}

@@ -1,0 +1,47 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.checkout-page {
+  min-height: calc(100vh - $footer-height - $header-height);
+
+  .checkout-page__content {
+    @include flex(space-between,flex-start,row);
+    padding: 4rem;
+
+  @media screen and (max-width: $phone-screen-width) {
+    @include flex(space-between,flex-start,column);
+    padding: 3% 2%;
+    }
+    .checkout-page__itenerary-panel {
+      width: 28%;
+      margin-bottom: 4rem;
+
+      @media screen and (max-width: $phone-screen-width) {
+        width: 100%;
+    padding: 3% 4%;
+
+      }
+      .checkout-page__need-help {
+        @include flex(none, flex-start, column);
+        width: 100%;
+        margin: 2rem 0;
+        padding: 2rem 1.2rem;
+        gap: 1rem;
+        background-color: $very-light-grey-background-color;
+        .help__title {
+          font-weight: 700;
+          font-size: 1.4rem;
+        }
+        .help__subtitle {
+          font-weight: 700;
+          font-size: 1rem;
+        }
+        .help__text {
+          font-weight: 400;
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+.landing-page {
+  min-height: $page-min-height;
+  @media screen and (max-width: $phone-screen-width) {
+    background-image: none !important;
+  }
+}
+.landing-page-mobile {
+  display: none;
+  @media screen and (max-width: $phone-screen-width) {
+    display: block;
+    height: 51vh;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9%;
+      left: 0%;
+      width: 100%;
+      height: 51vh;
+      background-color: $black-translucent-color;
+    }
+  }
+}
+.landing-page::before {
+  content: "";
+  position: absolute;
+  top: 9%;
+  left: 0%;
+  width: 100%;
+  height: 82%;
+  background-color: $black-translucent-color;
+
+  @media screen and (max-width: $phone-screen-width) {
+    display: none;
+  }
+}
+.landing-page__form-div {
+  padding: 3rem 7rem;
+  position: relative;
+  min-height: $page-min-height;
+  overflow-y: auto;
+  @media screen and (max-width: $phone-screen-width) {
+    position: static;
+    width: 90%;
+    padding: 0rem;
+    margin: auto;
+  }
+}
+@media screen and (min-width: $phone-screen-width) {
+
+::-webkit-scrollbar {
+  width: 2px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $black-translucent-color;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+}

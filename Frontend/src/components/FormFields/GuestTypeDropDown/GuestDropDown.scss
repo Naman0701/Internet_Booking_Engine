@@ -1,0 +1,36 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/variable.scss";
+@import "../../../utils/sass/reset.scss";
+
+
+#menu-applicableDiscountType .MuiMenu-paper {
+    .MuiMenuItem-root:hover,
+    .Mui-selected {
+      .MuiCheckbox-colorPrimary{
+          color: $white-color;
+      }
+      background-color: $primary-blue-color !important;
+      color: $white-color !important;
+    }
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked{
+      color: $white-color;
+    }
+  }
+  .property-drop-down__vertical{
+    width: 100%;
+    .MuiFormControl-root{
+          width: 100%;
+      }
+  }
+  .property-drop-down__horizontal{
+    display: none;
+    & *{
+      display: none;
+    }
+  }
+  .landing-page__guest-type{
+    width: 100%;
+    .MuiFormControl-root{
+      width: 100%;
+    }
+  }

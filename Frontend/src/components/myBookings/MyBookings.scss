@@ -1,0 +1,145 @@
+
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.my-bookings {
+  width: 90%;
+  align-items: center;
+  min-height: $page-min-height;
+
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
+
+  .my-bookings-content {
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: auto;
+    gap: 2rem;
+
+    @media only screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+
+    .my-bookings-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 4rem;
+      margin-top: 2rem;
+      gap: 3rem;
+      box-sizing: border-box;
+      border: 0.06rem solid #eff0f1;
+      box-shadow: 0 0.125rem 0.125rem $box-shadow-light-color;
+      border-radius: 0.32rem;
+      width: 60%;
+      cursor: pointer;
+
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+        margin-left: 0;
+        gap: 2rem;
+      }
+
+      .my-bookings-details {
+        display: flex;
+        align-items: flex-start;
+
+        @media only screen and (max-width: 768px) {
+          flex-direction: column;
+        }
+
+        .my-booking-guest {
+          margin: 0rem 0.5rem;
+          color: #5d5d5d;
+          font-weight: 400;
+          font-size: 0.875rem;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          flex-direction: row;
+
+          @media only screen and (max-width: 768px) {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.my-promo-details__promo-title {
+  display: flex;
+  align-items: flex-start;
+}
+
+.my-booking-nightly-rate {
+  display: flex;
+  align-items: flex-start;
+}
+
+.my-total-forstay {
+  display: flex;
+  align-items: flex-start;
+}
+
+.my-bookings-crousal {
+  padding: 1rem;
+}
+
+.my-content-section__room-detail {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  margin: 1rem 0rem;
+  padding-bottom: 1.6rem;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
+}
+
+.my-content-section__room-detail__booking-data {
+  margin-left: 1rem;
+  width: 100%;
+  padding-right: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: space-between;
+  flex-direction: column;
+  gap: 1rem;
+
+  @media only screen and (max-width: 768px) {
+   padding: 0 2rem 2rem 0;
+  }
+}
+
+.my-booking-data__date {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+
+  @media only screen and (max-width: 768px) {
+    flex-direction:row;
+    gap:0.5rem;
+    align-items: center;
+    width: 100%;
+  }
+}
+
+.my-booking-status {
+  @include flex(center, center, column);
+  background-color: $off-white-color;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: auto;
+  box-shadow: 0 0 1rem $black-translucent-color;
+  .my-emoji {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    filter: drop-shadow(0 0 0.5rem $grey-modal-background-color);
+  }}

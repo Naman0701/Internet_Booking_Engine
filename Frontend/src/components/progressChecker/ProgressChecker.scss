@@ -1,0 +1,60 @@
+@import "../../utils/sass/mixins.scss";
+@import "../../utils/sass/reset.scss";
+@import "../../utils/sass/variable.scss";
+
+.room-result-page__checker {
+  background-color: $light-grey-background-color;
+  height: 5.75rem;
+  display: inline-block;
+  width: 100%;
+  margin-top: -0.3rem;
+  @include flex(center, center, row);
+}
+.room-result-page__checker__step-section {
+  @include flex(center, center, column);
+  position: relative;
+  width: 15rem;
+  &:last-child .room-result-page__checker__seperator{
+    display: none;
+  }
+}
+.room-result-page__checker__step-section__label{
+  font-size: 1rem;
+  @media screen and (max-width: $phone-screen-width) {
+    font-size: 75%;
+  }
+}
+.room-result-page__checker__seperator{
+    display: inline-block;
+    width: 100%;
+    height:0.2rem;
+    background-color: $disabled-grey-color;
+    position: absolute;
+    left:55%;
+    top: 35%;
+}
+.room-result-page__checker__seperator__active{
+    @extend .room-result-page__checker__seperator;
+    background-color: $primary-blue-text-color;
+}
+.room-result-page__checker__step-section__step__active {
+  width: 1.8rem;
+  height: 1.8rem;
+  border-radius: 50%;
+  background-color: $bright-red-warning-color;
+  border: none;
+  cursor: pointer;
+  margin: 0.5rem 0rem;
+  font-size: 1.4rem;
+  color: $white-color;
+  position: relative;
+  z-index: 3;
+}
+.room-result-page__checker__step-section__step {
+  @extend .room-result-page__checker__step-section__step__active;
+  background-color: $disabled-grey-color;
+}
+.room-result-page__checker__step-section__step__select {
+  @extend .room-result-page__checker__step-section__step__active;
+  background-color: $primary-blue-text-color;
+}

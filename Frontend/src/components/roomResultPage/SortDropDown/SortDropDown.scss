@@ -1,0 +1,17 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/reset.scss";
+@import "../../../utils/sass/variable.scss";
+
+.sortDropDown {
+  width: 45%;
+  text-align: left;
+  .MuiFormControl-root {
+    width: 100%;
+
+    .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline,
+    .MuiOutlinedInput-notchedOutline {
+      outline: none !important;
+      border-color: transparent !important;
+    }
+  }
+}

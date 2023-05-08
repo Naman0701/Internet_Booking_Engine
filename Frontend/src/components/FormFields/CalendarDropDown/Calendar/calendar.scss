@@ -1,0 +1,145 @@
+@import "../../../../utils/sass/mixins.scss";
+@import "../../../../utils/sass/variable.scss";
+@import "../../../../utils/sass/reset.scss";
+
+* {
+  box-sizing: border-box !important;
+}
+#menu-dateRange .MuiMenu-paper{
+  min-width: 0px !important;
+  width: 45% !important;
+
+  @media screen and (max-width: $phone-screen-width) {
+    width: 95% !important;
+  }
+  .rdrCalendarWrapper{
+    width: 100%;
+    height: 50%;
+    
+  @media screen and (max-width: $phone-screen-width) {
+    width: 100%;
+    .rdrMonth{
+      width: 100% !important;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+    }
+  }
+  }
+}
+.rdrMonth{
+  width: 50% !important;
+}
+.rdrDateDisplayWrapper {
+  display: none;
+}
+.rdrDayToday span:after {
+  display: none;
+}
+.rdrDay {
+  height: 3.5rem !important;
+  width: calc(88.125% / 7) !important;
+  margin: 0rem 0.209rem !important;
+  @media screen and (max-width: $phone-screen-width) {
+  width: calc(85.125% / 7) !important;
+  }
+}
+.rdrDayDisabled {
+  opacity: 0.5;
+}
+.rdrInRange {
+  border-radius: 0 !important;
+  background-color: $disabled-grey-color !important;
+}
+.rdrDayPassive {
+  visibility: hidden;
+}
+.date-cell {
+  height: 100%;
+  width: 100%;
+  color: $black-color;
+}
+.date-cell__date {
+  height: 40%;
+  font-size: 1rem;
+}
+.date-cell__date-price {
+  height: 30%;
+  font-size: 0.8rem;
+}
+
+.rdrStartEdge,
+.rdrEndEdge {
+  border-radius: 0 !important;
+  color: $black-color !important;
+  & + .rdrDayNumber .date-cell {
+    color: $white-color !important;
+    background-color: $primary-blue-text-color;
+  }
+}
+.date-cell:hover {
+  color: $white-color !important;
+  background-color: $primary-blue-text-color;
+}
+.first-time-cell {
+  background-color: white !important;
+  & * {
+    color: $black-color !important;
+  }
+}
+.calendar__footer {
+  @include flex(flex-end, center, row);
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  .calendar__footer__average {
+    font-weight: 600;
+    margin: 0rem 1rem;
+  }
+}
+
+.calendar__footer__apply {
+  width: 23%;
+  @include flex(flex-start, flex-end, column);
+  @media screen and (max-width: $phone-screen-width) {
+    width: 50%;
+  }
+  .calendar__footer__apply__button {
+    padding: 0.8rem 1rem;
+    font-weight: bold;
+    border: none;
+    width: 90%;
+    border-radius: 0.4rem;
+    margin-right: 0.7rem;
+    color: $white-color;
+    background-color: $primary-blue-text-color;
+    cursor: pointer;
+    &:disabled {
+      background-color: $disabled-grey-color;
+      cursor: not-allowed;
+    }
+  }
+
+  .calendar__footer__apply__warning {
+    font-style: italic;
+    color: $bright-red-warning-color;
+    font-size: 0.8rem;
+    margin-top: 0.65rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.rdrDayDisabled .date-cell {
+  opacity: 0.5;
+  &:hover {
+    background-color: initial;
+    color: $black-color !important;
+  }
+}
+.rdrDayStartPreview {
+  display: none !important;
+}
+.calendar__footer {
+  background-color: $white-color;
+  padding: 1rem;
+  padding-top: 0;
+}

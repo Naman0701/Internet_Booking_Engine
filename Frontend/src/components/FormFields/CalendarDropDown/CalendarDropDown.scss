@@ -1,0 +1,34 @@
+@import "../../../utils/sass/mixins.scss";
+@import "../../../utils/sass/variable.scss";
+@import "../../../utils/sass/reset.scss";
+
+.MuiSelect-select{
+    padding-right: 0.5rem !important;
+}
+.css-kk1bwy-MuiButtonBase-root-MuiMenuItem-root{
+    background-color: $white-color !important;
+}
+.calendar-icon{
+    margin-right: 0.7rem;
+    cursor: pointer;
+  }
+.calendar-drop-down__vertical{
+    width: 100%;
+    .MuiFormControl-root{
+          width: 100%;
+      }
+  }
+  .calendar-drop-down__horizontal{
+    @extend .calendar-drop-down__vertical;
+    order: 1;
+    height: 4.25rem;
+    .MuiFormControl-root{
+        height: 100%;
+        .MuiInputBase-root{
+            height: 100%;
+            .MuiSelect-select{
+                padding: 0 !important;
+            }
+        }
+    }
+  }

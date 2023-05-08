@@ -1,0 +1,77 @@
+@import "../../../../utils/sass/mixins.scss";
+@import "../../../../utils/sass/reset.scss";
+@import "../../../../utils/sass/variable.scss";
+
+.rate-deals-card {
+  width: 40vw;
+
+  @include flex(space-between, flex-start, row);
+  gap: 1rem;
+  box-sizing: border-box;
+  border: 0.06rem solid #eff0f1;
+  box-shadow: 0 0.125rem 0.125rem $box-shadow-light-color;
+  border-radius: 0.32rem;
+  margin-top: 1rem;
+  @media screen and (max-width: $phone-screen-width) {
+    width: 100%;
+    @include flex(flex-start, flex-start, column);
+  }
+  .rate-deals-card__description {
+    width: 25vw;
+    padding: 1rem;
+
+    @media screen and (max-width: $phone-screen-width) {
+      width: 100%;
+      padding: 1rem 1.35rem;
+    }
+    .rate-deals-card__description-title {
+      @include flex(space-between, center, row);
+      font-weight: 700;
+    }
+    .rate-deals-card__description-text {
+      font-weight: 400;
+      color: $light-grey-text-color;
+    }
+  }
+  .rate-deals-card__select {
+    width: 15vw;
+    padding: 1rem;
+
+    @media screen and (max-width: $phone-screen-width) {
+      width: 100%;
+      padding: 1rem 1.35rem;
+    }
+    background-color: $very-light-grey-background-color;
+    .rate-deals-card__price-select {
+      @include flex(center, flex-end, column);
+      .rate-deals-card__price {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      .rate-deals-card__per-night {
+        font-weight: 400;
+        color: $dark-grey-background-color;
+      }
+    }
+    .rate-deals-card__select-button-div {
+      @include flex(center, center, column);
+      padding: 0.3rem;
+    @media screen and (max-width: $phone-screen-width) {
+      @include flex(center, center, column);
+      padding-right: 0;
+      align-items: flex-end;
+
+    }
+
+      .rate-deals-card__select-button {
+        background: $primary-blue-text-color;
+        border-radius: 0.25rem;
+        color: $white-color;
+        padding: 0.3rem 0.6rem;
+        border: none;
+        flex-grow: 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
